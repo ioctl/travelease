@@ -24,7 +24,6 @@ kotlinc AssistanceLUT.kt AssistanceLUTTest.kt \
   -d "${TEST_JAR}"
 
 # run JUnit-5 tests
-echo "=== 3. JUnit-5-Tests ==="
 java -jar "${JUNIT_JAR}" execute \
   --class-path "${TEST_JAR}" \
   --scan-class-path
