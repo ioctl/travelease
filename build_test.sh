@@ -24,6 +24,7 @@ kotlinc AssistanceLUT.kt AssistanceLUTTest.kt \
   -d "${TEST_JAR}"
 
 # run JUnit-5 tests
-java -jar "${JUNIT_JAR}" execute \
+java --enable-final-field-mutation=ALL-UNNAMED \
+  -jar "${JUNIT_JAR}" execute \
   --class-path "${TEST_JAR}" \
   --scan-class-path
